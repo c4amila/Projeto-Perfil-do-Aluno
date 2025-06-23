@@ -7,7 +7,7 @@
 
 body{
     background-color: #fcdefc;
-    padding: 5px;
+    padding: 2px;
 }
 
 p {
@@ -21,6 +21,11 @@ ul, li{
 
 .titulo{
     background-color: #7258b4;
+    margin-top: 5px;
+}
+
+label{
+    margin-bottom: 5px;
 }
 
 .uc-e-carrossel{
@@ -76,5 +81,32 @@ ul, li{
 
 .redes-sociais{
     margin-top: 5px;
+}
+
+button{
+    background-color: #7258b4;
+    color: #ffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 4px 8px;
+}
+
+input {
+    width: 450px;
+    padding: 2px 4px;
+    font-size: 15px;
+    border-radius: 5px;
+    
+}
+
+#cpf {
+    width: 130px;
+}
+#email {
+    width: 170px;
 }
 

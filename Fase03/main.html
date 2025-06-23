@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Projeto Perfil do Aluno - Fase 02</title>
+    <title>Projeto Perfil do Aluno - Fase 03</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 
         <div class="desc">
             <h4 class="titulo">Sobre mim:</h4>
-            <p>Sou uma pessoa que gosta de se divertir jogando, desde pequena sempre gostei de jogos variados.
+            <p id="descricao">Sou uma pessoa que gosta de se divertir jogando, desde pequena sempre gostei de jogos variados.
                 Também gosto muito de ler livros de fantasia. A música está presente na minha vida praticamente todos os
                 dias, tenho o hábito de
                 fazer muitas coisas no meu dia com música, às vezes até para relaxar. Eu treinava musculação desde os
@@ -26,9 +26,9 @@
                 15 anos, mas, devido à falta de tempo,
                 não estou mais praticando. Sempre que posso, gosto de ir para à praia, ou para uma cachoeira, ou algo
                 que
-                envolva a natureza.</p> 
-
-            <p>Estudei meu ensino médio no IFMG - Campus Itabirito em 2019, onde cursei Automação Industrial, foi lá que
+                envolva a natureza. 
+                <br><br>
+                Estudei meu ensino médio no IFMG - Campus Itabirito em 2019, onde cursei Automação Industrial, foi lá que
                 surgiu meu interesse pela programação.
                 Logo depois entrei no SENAI como Jovem Aprendiz pela Vale, cursando Manutenção Mecânica de Máquinas
                 Industriais. Atualmente, estou trabalhando
@@ -36,20 +36,24 @@
                 Desenvolvimento Back-end, pois quero alinhar
                 meu objeto de atuar nessa área futuramente.
             </p>
+
+            <input type="text" id="novaDesc" placeholder="Adicionar mais">
+            <button onclick="addDesc()">Adicionar</button>
         </div>
         
         
         <h4 class="titulo">UCs já cursadas:</h4>
         <div class="uc-e-carrossel">
             <div class="ucs">
-                <ul>
-                    
-                    <li>Programação de soluções computacionais</li>
-                    <li>Vida & Carreira</li>
-                    <li>Modelagem de software</li>
-                    <li>Ambientes computacionais e conectividade</li>
-                    <li>Sistemas computacionais e segurança</li>
+                <ul id="lista">
+                    <!--para cima: &#8679; para baixo: &#8681;-->
+                    <li>Programação de soluções computacionais <button onclick="mover(this, 'sobe')">&#8679;</button><button onclick="mover(this, 'desce')">&#8681;</button></li>
+                    <li>Vida & Carreira <button onclick="mover(this, 'sobe')">&#8679;</button><button onclick="mover(this, 'desce')">&#8681;</button></li>
+                    <li>Modelagem de software <button onclick="mover(this, 'sobe')">&#8679;</button><button onclick="mover(this, 'desce')">&#8681;</button></li>
+                    <li>Ambientes computacionais e conectividade <button onclick="mover(this, 'sobe')">&#8679;</button><button onclick="mover(this, 'desce')">&#8681;</button></li>
+                    <li>Sistemas computacionais e segurança <button onclick="mover(this, 'sobe')">&#8679;</button><button onclick="mover(this, 'desce')">&#8681;</button></li>
                 </ul>
+                <button onclick="addNovaUc()">Adicione uma nova UC</button>
             </div>
 
             <div class="carrossel">
@@ -61,6 +65,16 @@
                 <button class="botao" id="prox">&#187;</button> <!-- botao que vai pra frente -->
                 <button class="botao" id="voltar">&#171;</button> <!-- botao que volta imagem-->
             </div>
+        </div>
+
+        <div class="formulario">
+            <h4 class="titulo">Formulário:</h4>
+            
+            <label>CPF</label><br>
+            <input type="text" id="cpf" placeholder="123.456.789-00"><br><br>
+
+            <label>E-mail</label><br>
+            <input type="email" id="email" placeholder="exemplo@email.com"><br>
         </div>
 
         <div class="redes-sociais">
